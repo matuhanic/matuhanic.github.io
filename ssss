@@ -1,29 +1,5 @@
-# CPU
-CPU_SCALING_GOVERNOR_ON_BAT=powersave
-CPU_ENERGY_PERF_POLICY_ON_BAT=power
-CPU_MIN_PERF_ON_BAT=0
-CPU_MAX_PERF_ON_BAT=60          # ограничиваем турбо-буст, даёт +1–1.5 ч
-CPU_BOOST_ON_BAT=0
-
-# Intel P-state (для твоего 8130U)
-PLATFORM_PROFILE_ON_BAT=low-power   # если поддерживается kernel ≥ 6.5
-
-# Диск
-AHCI_RUNTIME_PM_ON_BAT=auto
-RUNTIME_PM_ON_BAT=auto
-
-# SATA power management
-SATA_LINKPWR_ON_BAT=max_performance→powersave
-# или ещё агрессивнее:
-SATA_LINKPWR_ON_BAT=med_power_with_dipm min_power
-
-# Wi-Fi
-WIFI_PWR_ON_BAT=on
-
-# USB autosuspend
-USB_AUTOSUSPEND=1
-USB_BLACKLIST="0cf3:3004"   # если bluetooth мешает — добавь свой ID
-
-# Звуковая карта
-SOUND_POWER_SAVE_ON_BAT=1
-SOUND_POWER_SAVE_CONTROLLER=Y
+sudo pacman -S hyprland hyprpaper hyprlock hypridle \
+               waybar wofi rofi-lbonn-wayland-git \
+               qt5-wayland qt6-wayland glfw-wayland \
+               xdg-desktop-portal-hyprland \
+               polkit-kde-agent
