@@ -1,5 +1,8 @@
-sudo pacman -S hyprland hyprpaper hyprlock hypridle \
-               waybar wofi rofi-lbonn-wayland-git \
-               qt5-wayland qt6-wayland glfw-wayland \
-               xdg-desktop-portal-hyprland \
-               polkit-kde-agent
+# Установим git и зависимости
+sudo pacman -S git base-devel
+
+# Клонируем и запускаем скрипт (он сам всё поставит и настроит)
+git clone --depth 1 https://github.com/JaKooLit/Arch-Hyprland.git ~/Arch-Hyprland
+cd ~/Arch-Hyprland
+chmod +x install.sh
+./install.sh
